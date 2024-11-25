@@ -1,23 +1,29 @@
 {
-    "template": "https://github.com/scverse/cookiecutter-scverse",
-    "commit": "c96cadaa981a71113cc97ada8e5085188ed22ed7",
-    "checkout": "v0.1.1",
-    "context": {
-        "cookiecutter": {
-            "project_name": "monkeybread",
-            "package_name": "monkeybread",
-            "project_description": "Tool for analyzing cell closeness in spatial transcriptomic data",
-            "author_full_name": "Immunitas Therapeutics",
-            "author_email": "mbernstein@immunitastx.com",
-            "github_user": "immunitastx",
-            "project_repo": "https://github.com/immunitastx/monkeybread",
-            "license": "MIT License",
-            "_copy_without_render": [
-                ".github/workflows/**.yaml",
-                "docs/_templates/autosummary/**.rst"
-            ],
-            "_template": "https://github.com/scverse/cookiecutter-scverse"
-        }
-    },
-    "directory": null
+  "template": "https://github.com/scverse/cookiecutter-scverse",
+  "commit": "87a407a65408d75a949c0b54b19fd287475a56f8",
+  "checkout": "v0.4.0",
+  "context": {
+    "cookiecutter": {
+      "project_name": "monkeybread",
+      "package_name": "monkeybread",
+      "project_description": "Tool for analyzing cell closeness in spatial transcriptomic data",
+      "author_full_name": "Immunitas Therapeutics",
+      "author_email": "mbernstein@immunitastx.com",
+      "github_user": "immunitastx",
+      "project_repo": "https://github.com/immunitastx/monkeybread",
+      "license": "MIT License",
+      "_copy_without_render": [
+        ".github/workflows/build.yaml",
+        ".github/workflows/test.yaml",
+        "docs/_templates/autosummary/**.rst"
+      ],
+      "_render_devdocs": false,
+      "_jinja2_env_vars": {
+        "lstrip_blocks": true,
+        "trim_blocks": true
+      },
+      "_template": "https://github.com/scverse/cookiecutter-scverse"
+    }
+  },
+  "directory": null
 }

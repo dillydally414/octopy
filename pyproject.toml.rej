@@ -1,0 +1,55 @@
+diff a/pyproject.toml b/pyproject.toml	(rejected hunks)
+@@ -2,13 +2,12 @@
+ build-backend = "hatchling.build"
+ requires = ["hatchling"]
+ 
+-
+ [project]
+ name = "monkeybread"
+ version = "0.0.1"
+ description = "Tool for analyzing cell closeness in spatial transcriptomic data"
+ readme = "README.md"
+-requires-python = ">=3.8"
++requires-python = ">=3.10"
+ license = {file = "LICENSE"}
+ authors = [
+     {name = "Immunitas Therapeutics"},
+@@ -22,29 +21,31 @@ urls.Home-page = "https://github.com/immunitastx/monkeybread"
+ dependencies = [
+     "anndata",
+     # for debug logging (referenced from the issue template)
+-    "session-info"
++    "session-info",
+ ]
+ 
+ [project.optional-dependencies]
+ dev = [
+-    # CLI for bumping the version number
+-    "bump2version",
+-    "pre-commit"
++    "pre-commit",
++    "twine>=4.0.2",
+ ]
+ doc = [
++    "docutils>=0.8,!=0.18.*,!=0.19.*",
+     "sphinx>=4",
+-    "sphinx-book-theme>=0.3.3",
+-    "myst-nb",
++    "sphinx-book-theme>=1.0.0",
++    "myst-nb>=1.1.0",
+     "sphinxcontrib-bibtex>=1.0.0",
+     "sphinx-autodoc-typehints",
++    "sphinxext-opengraph",
+     # For notebooks
+     "ipykernel",
+     "ipython",
+     "sphinx-copybutton",
++    "pandas",
+ ]
+ test = [
+     "pytest",
+-    "pytest-cov",
++    "coverage",
+ ]
+ 
+ [tool.coverage.run]
